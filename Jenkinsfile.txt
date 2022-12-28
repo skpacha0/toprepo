@@ -8,7 +8,7 @@ pipeline {
         }
         stage('github repo') { 
             steps {
-		sh "rm -rf toprepo"
+		#sh "rm -rf toprepo"
                 sh "git clone https://github.com/skpacha0/toprepo.git"
                 
 
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('build artifact') { 
             steps {
-		sh "mvn clean -f toprepo"
+		#sh "mvn clean -f toprepo"
 		sh "mvn install -f toprepo"
 		sh "mvn package -f toprepo"
                 
